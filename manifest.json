@@ -1,8 +1,8 @@
 {
   "name": "Outlook Notifier",
   "description": "What Microsoft should have done.",
-  "version": "1.6",
-  "author": "Jorge Ortega & Tommy Beadle",
+  "version": "1.7",
+  "author": "Jorge Ortega, Tommy Beadle, Mohsen Vahebi",
   "permissions": [
     "notifications",
     "tabs"
@@ -10,11 +10,12 @@
   "host_permissions": [
     "https://outlook.office365.com/*",
     "https://outlook.office.com/*",
-    "https://outlook.office.com.mcas.ms/*"
+    "https://outlook.office.com.mcas.ms/*",
+    "https://outlook.cloud.microsoft/*"
   ],
   "content_scripts": [
     {
-      "matches": ["https://*.office365.com/*", "https://*.office.com/*", "https://*.office.com.mcas.ms/*"],
+      "matches": ["https://*.office365.com/*", "https://*.office.com/*", "https://*.office.com.mcas.ms/*", "https://outlook.cloud.microsoft/*"],
       "js": ["content_script.js"],
       "run_at": "document_end"
     }
